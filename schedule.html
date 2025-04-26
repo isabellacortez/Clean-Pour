@@ -33,19 +33,19 @@
             <span class="visually-hidden">Menu</span>
           </button>
         </div>
+        <nav id="primary-nav" class="primary-nav">
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="schedule.html">schedule</a></li>
+            <li><a href="services.html">services/pricing</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="primary-nav" class="primary-nav">
-        <ul>
-          <li><a href="index.html">home</a></li>
-          <li><a href="schedule.html">schedule</a></li>
-          <li><a href="services.html">services/pricing</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
       <section class="schedule">
         <h2>Schedule a Cleaning</h2>
-        <form method="post" action="receipt.html">
+        <form method="get" action="receipt.html" id="schedule-form">
           <div class="form-group">
             <label for="name">Full Name <span class="asterick">*</span></label>
             <br />

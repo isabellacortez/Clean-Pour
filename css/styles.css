@@ -350,6 +350,59 @@ select:focus {
   transform: scale(0.98);
 }
 
+/* Recipt page */
+.receipt {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 #9e9e9e, 0 6px 20px 0 #9e9e9e;
+}
+.receipt > h2 {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 600;
+  padding-top: 15px;
+  padding-bottom: 10px;
+}
+
+.receipt > p {
+  font-family: Roboto, sans-serif;
+  font-size: 16px;
+  align-self: flex-start;
+  padding: 10px 20px 10px 20px;
+}
+
+.confirmation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+
+.check-circle {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #3e6259;
+  color: white;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 4px 4px #9e9e9e82;
+  margin-bottom: 10px;
+}
+
+.confirm-text {
+  font-family: Nunito, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+}
+
 /* Main - services page */
 
 .services {
@@ -360,58 +413,63 @@ select:focus {
   margin: 40px;
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 #9e9e9e, 0 6px 20px 0 #9e9e9e;
+  padding-bottom: 20px;
 }
 
-#service-h2 {
+.service-h2 {
   font-family: Nunito, sans-serif;
   font-size: 28px;
-  font-weight: 400;
-  padding-top: 15px;
-  text-shadow: 1.4px 1.4px 2px #9e9e9e;
+  font-weight: 600;
   letter-spacing: 0.5px;
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
-#service-h3 {
+.service-h3 {
   font-family: Nunito, sans-serif;
   font-size: 22px;
-  font-weight: 400;
+  font-weight: 500;
   padding-bottom: 10px;
-  text-shadow: 1.4px 1.4px 2px #c9c9c9;
   letter-spacing: 0.5px;
 }
 
-#home-hr {
-  border: 0.5px solid #c9c9c9;
-  width: 90%;
-}
-
-#home-p {
+.service-p {
   font-family: Roboto, sans-serif;
   font-size: 16px;
-  text-align: center;
-  padding: 10px 20px 20px 20px;
 }
 
-.about-home > p {
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  text-align: center;
-  padding: 10px 20px 20px 20px;
+.service {
+  padding: 10px 20px;
 }
 
-.services-home > p {
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  text-align: center;
-  padding: 10px 20px 20px 20px;
-}
-.services-home > ul {
-  font-family: Roboto, sans-serif;
-  font-size: 16px;
-  padding: 10px 30px 20px 30px;
+#padding {
+  padding-top: 10px;
 }
 
-.services-home > ul > li {
-  padding: 5px;
-}
+/* Desktop styles */
 
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .primary-nav {
+    display: flex;
+    position: static;
+    width: auto;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .primary-nav ul {
+    display: flex;
+  }
+
+  .primary-nav li {
+    margin: 0 10px;
+  }
+
+  .primary-nav a {
+    border-radius: 5px;
+  }
+}

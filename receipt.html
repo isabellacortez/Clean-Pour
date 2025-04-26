@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Clean Pour | Schedule</title>
+    <title>Clean Pour | Receipt</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,18 +33,32 @@
             <span class="visually-hidden">Menu</span>
           </button>
         </div>
+        <nav id="primary-nav" class="primary-nav">
+          <ul>
+            <li><a href="index.html">home</a></li>
+            <li><a href="schedule.html">schedule</a></li>
+            <li><a href="services.html">services/pricing</a></li>
+          </ul>
+        </nav>
       </div>
-      <nav id="primary-nav" class="primary-nav">
-        <ul>
-          <li><a href="index.html">home</a></li>
-          <li><a href="schedule.html">schedule</a></li>
-          <li><a href="services.html">services/pricing</a></li>
-        </ul>
-      </nav>
     </header>
     <main>
-      
+      <section class="receipt">
+        <h2>Thank you for scheduling!</h2>
+        <p><span class="bold">Name:</span> <span id="r-name"></span></p>
+        <p><span class="bold">Phone:</span> <span id="r-phone"></span></p>
+        <p><span class="bold">Email:</span> <span id="r-email"></span></p>
+        <p><span class="bold">Date:</span> <span id="r-date"></span></p>
+        <p><span class="bold">Time:</span> <span id="r-time"></span></p>
+        <p><span class="bold">Type:</span> <span id="r-type"></span></p>
+        <p><span class="bold">Comments:</span> <span id="r-comments"></span></p>
+        <div class="confirmation">
+          <div class="check-circle">✓</div>
+          <h3 class="confirm-text">Information Received</h3>
+        </div>
+      </section>
     </main>
+
     <footer>
       <div class="footer-container">
         <div class="footer-left">
@@ -72,5 +86,21 @@
       </div>
     </footer>
     <script src="js/main.js"></script>
+
+    <script>
+      const params = new URLSearchParams(window.location.search);
+
+      function fill(id, key) {
+        document.getElementById(id).textContent = params.get(key) || "—";
+      }
+
+      fill("r-name", "name");
+      fill("r-phone", "phone");
+      fill("r-email", "email");
+      fill("r-date", "date");
+      fill("r-time", "time");
+      fill("r-type", "text");
+      fill("r-comments", "comment");
+    </script>
   </body>
 </html>
