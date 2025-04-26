@@ -124,7 +124,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: 1200px;
+
   margin: 0 auto;
 }
 
@@ -406,7 +406,6 @@ select:focus {
 /* Main - services page */
 
 .services {
-  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -416,7 +415,14 @@ select:focus {
   padding-bottom: 20px;
 }
 
+#service-hr {
+  text-align: center;
+  border: 0.5px solid #c9c9c9;
+  width: 100%;
+}
+
 .service-h2 {
+  text-align: center;
   font-family: Nunito, sans-serif;
   font-size: 28px;
   font-weight: 600;
@@ -448,7 +454,8 @@ select:focus {
 
 /* Desktop styles */
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 992px) {
+  /* Header */
   .menu-toggle {
     display: none;
   }
@@ -471,5 +478,59 @@ select:focus {
 
   .primary-nav a {
     border-radius: 5px;
+  }
+
+  h1 {
+    letter-spacing: 1px;
+  }
+
+  /* Main - home page */
+
+  video {
+    margin-left: 40px;
+  }
+  .home-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 40px;
+  }
+  .home-top video {
+    flex: 1;
+    max-width: 615px;
+    height: 350px;
+  }
+  .home-top .info-home {
+    flex: 1;
+  }
+
+  .home-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: 40px;
+  }
+
+  .home-bottom .about-home,
+  .home-bottom .services-home {
+    flex: 1;
+  }
+
+  /* Main - schedule page */
+
+  .schedule {
+    width: 60%;
+    margin: 40px auto;
+  }
+
+  .submit {
+    width: 15%;
+  }
+
+  /* Main - services page */
+  .services {
+    width: 60%;
+    margin: 40px auto;
   }
 }
