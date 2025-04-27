@@ -533,4 +533,11 @@ select:focus {
     width: 60%;
     margin: 40px auto;
   }
+
+  /* Receipt page */
+
+  .receipt {
+    width: 60%;
+    margin: 40px auto;
+  }
 }
